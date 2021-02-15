@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Kalorienrechner</title>
+</head>
+<body>
+
+    <section>
+        <h2>Kalorienrechner</h2>
+
+        <form action="" id="selectionsFirst">
+
+            <label for="bodyHeight">Körpergröße (cm)</label>
+            <br>
+            <input type="number" name="" id="bodyHeight">
+            <br>
+            <label for="age">Alter (Jahre)</label>
+            <br>
+            <input type="number" name="" id="age">
+            <br>
+            <label for="bodyWeight">Gewicht (kg)</label>
+            <br>
+            <input type="number" name="" id="bodyWeight">
+            
+            <p id="errorMsg1" style="color: red;"></p>
+
+        </form>
+
+        <form action="">
+            <p>Körperbau</p>
+            <input type="radio" name="gender" id="female" checked onchange="showGender()">
+            <label for="female">Weiblich</label>
+            <br>
+            <input type="radio" name="gender" id="male" onchange="showGender()">
+            <label for="male">Männlich</label>
+        </form>
+
+        <form action="">
+            <p>Arbeits- und Freizeitaktivität</p>
+            <select name="" id="">
+                <option value="sitting-job" id="sitting">Nur sitzend oder liegend</option>
+                <option value="half-sitting-job" id="halfSitting">Sitzend und gehend</option>
+                <option value="walking-job" id="walking">Hauptsächlich gehend</option>
+                <option value="half-running-job" id="halfwalking">Manchmal mit Jogging</option>
+
+                <option value="running-job" id="runningWork">Forrest Gump</option>
+            </select>
+        </form>
+
+        <br>
+
+        <input type="button" value="Submit" onclick="showResult()">
+        <br>
+        <table id="tableResult">
+            <tr>
+                <td></td>
+                <td>kcal</td>
+                <td>kJ</td>
+            </tr>
+            <tr>
+                <td>Grundumsatz</td>
+                <td id="grundAusgabeKc">1300</td>
+                <td id="grundAusgabeJ">2000</td>
+            </tr>
+            <tr>
+                <td>Gesamtumsatz</td>
+                <td id="gesamtAusgabeKc">4000</td>
+                <td id="gesamtAusgabeJc">7000</td>
+            </tr>
+        </table>
+
+    </section>
+    
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
